@@ -1,10 +1,10 @@
 import React from 'react';
-import MainPage from '../pages/MainPage';
+import DashBoard from '../pages/DashBoard';
 
 const routes = [
   {
     path: '/',
-    element: <MainPage />,
+    element: <DashBoard />,
   },
 ];
 
