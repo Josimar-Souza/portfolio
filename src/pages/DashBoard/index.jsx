@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 import {
   DasBoardContainer,
@@ -14,18 +14,42 @@ import {
 import ProfilePic from '../../images/ProfilePic.jpeg';
 
 function DashBoard() {
+  const navigate = useNavigate();
+
+  const onLinkButtonClicked = (link) => {
+    navigate(`/${link}`);
+  };
+
+  // This image needs to change before publishing,
+  // its recomend to have an even resolution like 512x512
   return (
     <DasBoardContainer>
       <DashBoardAside>
         <ProfileImage src={ProfilePic} />
         <ButtonsContainer>
-          <CustomButton>Sobre min</CustomButton>
-          <CustomButton>Projetos principais</CustomButton>
-          <CustomButton>Principais tecnologias</CustomButton>
+          <CustomButton
+            onClick={() => onLinkButtonClicked('about-me')}
+          >
+            Sobre min
+          </CustomButton>
+          <CustomButton
+            onClick={() => onLinkButtonClicked('projects')}
+          >
+            Projetos principais
+          </CustomButton>
+          <CustomButton
+            onClick={() => onLinkButtonClicked('tecnologies')}
+          >
+            Principais tecnologias
+          </CustomButton>
         </ButtonsContainer>
         <ContactContainer>
-          <CustomLinkedinIcon />
-          <CustomGitHubIcon />
+          <a rel="noreferrer" href="https://www.linkedin.com/in/josimar-souza-brito/" target="_blank">
+            <CustomLinkedinIcon />
+          </a>
+          <a rel="noreferrer" href="https://github.com/Josimar-Souza" target="_blank">
+            <CustomGitHubIcon />
+          </a>
         </ContactContainer>
       </DashBoardAside>
       <Outlet />
