@@ -36,7 +36,7 @@ export const CustomButton = styled(Button)`
   border: none;
   border-bottom: 1px solid white;
   border-radius: 10px;
-  color: white;
+  color: #D4ADFC;
   font-size: 14px;
   height: fit-content;
   text-align: center;
