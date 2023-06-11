@@ -1,9 +1,18 @@
 import React from 'react';
-import ProjectsPageContainer from './projectsStyles';
+import { ProjectsPageContainer, ProjectsContainer, ProjectsPageTitle } from './projectsStyles';
+import projects from '../../constants/projects';
+import ProjectsCard from '../../components/ProjectsCard';
 
 function Projects() {
   return (
-    <ProjectsPageContainer />
+    <ProjectsPageContainer>
+      <ProjectsPageTitle>Pincipais projetos que desenvolvi</ProjectsPageTitle>
+      <ProjectsContainer>
+        {projects.map((project) => (
+          <ProjectsCard key={project.id} project={project} />
+        ))}
+      </ProjectsContainer>
+    </ProjectsPageContainer>
   );
 }
 
