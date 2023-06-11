@@ -11,7 +11,6 @@ export const ProjectsPageContainer = styled.div`
 `;
 
 export const ProjectsContainer = styled.div`
-  border: 1px solid yellow;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

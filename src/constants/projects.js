@@ -1,7 +1,8 @@
 const projects = [
   {
     id: 1,
-    name: 'Countries infos',
+    label: 'Countries infos',
+    name: 'countries-info',
     description: 'Um site para visualizar informações de países do mundo',
     site: 'https://countries-infos.onrender.com/',
     github: 'https://github.com/Josimar-Souza/countries-info',
@@ -9,7 +10,8 @@ const projects = [
   },
   {
     id: 2,
-    name: 'Sharp Movies',
+    label: 'Sharp Movies',
+    name: 'sharp-movies',
     description: 'Um site para visualizar filmes e séries',
     site: 'https://sharp-movies.onrender.com/movies',
     github: 'https://github.com/Josimar-Souza/movies-site',
@@ -17,7 +19,8 @@ const projects = [
   },
   {
     id: 3,
-    name: 'Games librery API',
+    label: 'Games library API',
+    name: 'games-library-api',
     description: 'API para alimentar uma biblioteca de jogos pessoal!',
     site: null,
     github: 'https://github.com/Josimar-Souza/games-library-backend',
@@ -25,7 +28,8 @@ const projects = [
   },
   {
     id: 4,
-    name: 'Temperature converter',
+    label: 'Temperature converter',
+    name: 'temperature-converter',
     description: 'Uma simples site para converter temperatura celsius para fahrenheit',
     site: 'https://temperature-converter-wjri.onrender.com/',
     github: 'https://github.com/Josimar-Souza/Temperature-converter',
@@ -33,7 +37,8 @@ const projects = [
   },
   {
     id: 5,
-    name: 'Calculadora',
+    label: 'Calculadora',
+    name: 'calculator',
     description: 'Uma simples calculadora',
     site: 'https://calculator-8e08.onrender.com/',
     github: 'https://github.com/Josimar-Souza/Calculator',
