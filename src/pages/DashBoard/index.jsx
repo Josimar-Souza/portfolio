@@ -23,7 +23,7 @@ function DashBoard() {
   const navigate = useNavigate();
   const [sideInfo, setSideInfo] = useState({
     animation: false,
-    animationDirection: 'normal',
+    animationDirection: 'reverse',
   });
 
   const onLinkButtonClicked = (link) => {

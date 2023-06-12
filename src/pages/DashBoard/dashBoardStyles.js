@@ -13,8 +13,6 @@ const dashBoardExitAnimation = keyframes`
 `;
 
 const getAnimation = ({ animation, animationDirection }) => {
-  console.log('Animation: ', animation);
-  console.log('Animation direction: ', animationDirection);
   if (animation && animationDirection === 'normal') {
     return dashBoardEnterAnimation;
   }
@@ -40,6 +38,7 @@ export const DashBoardAside = styled.aside`
   justify-content: space-between;
   padding: 10px;
   width: 25%;
+  z-index: 2;
 
   @media only screen and (max-width: 512px) {
     position: fixed;
