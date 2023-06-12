@@ -2,6 +2,7 @@ import React from 'react';
 import DashBoard from '../pages/DashBoard';
 import AboutMe from '../pages/AboutMe';
 import Projects from '../pages/Projects';
+import Tecnologies from '../pages/Tecnologies';
 
 const routes = [
   {
@@ -15,6 +16,10 @@ const routes = [
       {
         path: 'Projects',
         element: <Projects />,
+      },
+      {
+        path: 'tecnologies',
+        element: <Tecnologies />,
       },
     ],
   },

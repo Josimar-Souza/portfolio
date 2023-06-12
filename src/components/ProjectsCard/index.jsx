@@ -18,8 +18,6 @@ import temperatureConverterImage from '../../images/projects/temperature-convert
 import calculatorImage from '../../images/projects/calculator.png';
 
 function ProjectsCard({ project }) {
-  console.log(project);
-
   const getImage = () => {
     switch (project.name) {
       case 'countries-info':
