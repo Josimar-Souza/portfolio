@@ -1,6 +1,30 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Button } from 'antd';
 import { LinkedinOutlined, GithubOutlined, MailOutlined } from '@ant-design/icons';
+
+const getScreenWidth = () => ((80 * window.innerWidth) / 100);
+
+const dashBoardEnterAnimation = keyframes`
+  from { left: -${getScreenWidth() + 2}px; }
+  to { left: 0; }
+`;
+
+const dashBoardExitAnimation = keyframes`
+  from { left: 0; }
+  to { left: -${getScreenWidth() + 2}px; }
+`;
+
+const getAnimation = ({ animation, animationDirection }) => {
+  if (animation && animationDirection === 'normal') {
+    return dashBoardEnterAnimation;
+  }
+
+  if (animation && animationDirection === 'reverse') {
+    return dashBoardExitAnimation;
+  }
+
+  return '';
+};
 
 export const DasBoardContainer = styled.main`
   display: flex;
@@ -16,6 +40,18 @@ export const DashBoardAside = styled.aside`
   justify-content: space-between;
   padding: 10px;
   width: 25%;
+  z-index: 2;
+
+  @media only screen and (max-width: 512px) {
+    position: fixed;
+    height: 100vh;
+    left: -${getScreenWidth() + 2}px;;
+    width: 80%;
+
+    animation-name: ${getAnimation};
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
 `;
 
 export const ProfileImage = styled.img`
@@ -92,4 +128,22 @@ export const Info = styled.p`
 
 export const CustomMailIcon = styled(MailOutlined)`
   margin-right: 12px;
+`;
+
+export const MobileSideToggle = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: absolute;
+  right: -35px;
+  top: 10px;
+  width: 20px;
+`;
+
+export const SideToggleBars = styled.div`
+  background-color: white;
+  border-radius: 15px;
+  height: 2px;
+  width: 100%;
 `;

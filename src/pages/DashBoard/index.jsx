@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { isMobile } from 'react-device-detect';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 import {
@@ -13,21 +14,47 @@ import {
   InfoContainer,
   Info,
   CustomMailIcon,
+  MobileSideToggle,
+  SideToggleBars,
 } from './dashBoardStyles';
 import ProfilePic from '../../images/ProfilePic.jpeg';
 
 function DashBoard() {
   const navigate = useNavigate();
+  const [sideInfo, setSideInfo] = useState({
+    animation: false,
+    animationDirection: 'reverse',
+  });
 
   const onLinkButtonClicked = (link) => {
     navigate(`/${link}`);
+  };
+
+  const onSideToggleClicked = () => {
+    if (sideInfo.animationDirection === 'reverse') {
+      setSideInfo({ ...setSideInfo, animationDirection: 'normal', animation: true });
+    } else {
+      setSideInfo({ ...setSideInfo, animationDirection: 'reverse', animation: true });
+    }
   };
 
   // This image needs to change before publishing,
   // its recomend to have an even resolution like 512x512
   return (
     <DasBoardContainer>
-      <DashBoardAside>
+      <DashBoardAside
+        animation={sideInfo.animation}
+        animationDirection={sideInfo.animationDirection}
+      >
+        {isMobile
+          ? (
+            <MobileSideToggle onClick={onSideToggleClicked}>
+              <SideToggleBars />
+              <SideToggleBars />
+              <SideToggleBars />
+            </MobileSideToggle>
+          )
+          : null}
         <ProfileImage src={ProfilePic} />
         <InfoContainer>
           <Info fontSize="26px">Josimar Souza Brito</Info>
