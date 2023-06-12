@@ -1,10 +1,11 @@
 import React from 'react';
-import TecnologiesPageContainer from './tecnologiesStyles';
+import { TecnologiesPageContainer, TecnologiesImage } from './tecnologiesStyles';
+import tecnologiesImage from '../../images/tecnologies-project.png';
 
 function Tecnologies() {
   return (
     <TecnologiesPageContainer>
-      <h1>Tecnologies page</h1>
+      <TecnologiesImage src={tecnologiesImage} />
     </TecnologiesPageContainer>
   );
 }

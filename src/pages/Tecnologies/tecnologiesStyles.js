@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
-const TecnologiesPageContainer = styled.div``;
+export const TecnologiesPageContainer = styled.div`
+  background-color: #1D267D;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 80%;
+`;
 
-export default TecnologiesPageContainer;
+export const TecnologiesImage = styled.img`
+  height: 100vh;
+  width: 80%;
+`;
