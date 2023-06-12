@@ -78,6 +78,10 @@ export const CustomButton = styled(Button)`
   text-align: center;
   margin: ${({ margin }) => margin};
   width: ${({ width }) => width};
+
+  @media only screen and (max-width: 512px) {
+    width: ${({ mobileWidth }) => mobileWidth};
+  }
 `;
 
 export const ContactContainer = styled.div`
@@ -156,17 +160,30 @@ export const RootContainer = styled.div`
   justify-content: center;
   min-height: 100vh;
   width: 80%;
+
+  @media only screen and (max-width: 512px) {
+    width: 100%;
+  }
 `;
 
 export const RootTitle = styled.h1`
   color: #D4ADFC;
   margin-bottom: 30px;
+
+  @media only screen and (max-width: 512px) {
+    font-size: 20px;
+  }
 `;
 
 export const RootButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+
+  @media only screen and (max-width: 512px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 export const RootInfo = styled.p`

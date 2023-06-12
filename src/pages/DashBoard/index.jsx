@@ -40,9 +40,12 @@ function DashBoard() {
     }
   };
 
-  const onLinkButtonClicked = (link) => {
+  const onLinkButtonClicked = (link, animate = false) => {
     navigate(`/${link}`);
-    onSideToggleClicked();
+
+    if (animate) {
+      onSideToggleClicked();
+    }
   };
 
   // This image needs to change before publishing,
@@ -74,21 +77,21 @@ function DashBoard() {
           <CustomButton
             width="80%"
             margin="10px 0"
-            onClick={() => onLinkButtonClicked('about-me')}
+            onClick={() => onLinkButtonClicked('about-me', true)}
           >
             Sobre min
           </CustomButton>
           <CustomButton
             width="80%"
             margin="10px 0"
-            onClick={() => onLinkButtonClicked('projects')}
+            onClick={() => onLinkButtonClicked('projects', true)}
           >
             Projetos principais
           </CustomButton>
           <CustomButton
             width="80%"
             margin="10px 0"
-            onClick={() => onLinkButtonClicked('tecnologies')}
+            onClick={() => onLinkButtonClicked('tecnologies', true)}
           >
             Principais tecnologias
           </CustomButton>
@@ -110,21 +113,24 @@ function DashBoard() {
             <RootButtonsContainer>
               <CustomButton
                 width="15%"
-                margin="0 10px"
+                mobileWidth="50%"
+                margin="10px 0"
                 onClick={() => onLinkButtonClicked('about-me')}
               >
                 Sobre min
               </CustomButton>
               <CustomButton
                 width="15%"
-                margin="0 10px"
+                mobileWidth="50%"
+                margin="10px 0"
                 onClick={() => onLinkButtonClicked('projects')}
               >
                 Projetos principais
               </CustomButton>
               <CustomButton
                 width="15%"
-                margin="0 10px"
+                mobileWidth="50%"
+                margin="10px 0"
                 onClick={() => onLinkButtonClicked('tecnologies')}
               >
                 Principais tecnologias
