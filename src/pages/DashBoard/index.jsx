@@ -26,16 +26,17 @@ function DashBoard() {
     animationDirection: 'reverse',
   });
 
-  const onLinkButtonClicked = (link) => {
-    navigate(`/${link}`);
-  };
-
   const onSideToggleClicked = () => {
     if (sideInfo.animationDirection === 'reverse') {
       setSideInfo({ ...setSideInfo, animationDirection: 'normal', animation: true });
     } else {
       setSideInfo({ ...setSideInfo, animationDirection: 'reverse', animation: true });
     }
+  };
+
+  const onLinkButtonClicked = (link) => {
+    navigate(`/${link}`);
+    onSideToggleClicked();
   };
 
   // This image needs to change before publishing,
