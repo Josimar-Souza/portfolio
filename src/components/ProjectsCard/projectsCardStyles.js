@@ -12,6 +12,10 @@ export const CardContainer = styled.div`
   min-height: 250px;
   padding: 5px;
   width: 18%;
+
+  @media only screen and (max-width: 512px) {
+    width: 60%;
+  }
 `;
 
 export const CardImageContainer = styled.div`
