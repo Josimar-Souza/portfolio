@@ -2,14 +2,16 @@ import styled, { keyframes } from 'styled-components';
 import { Button } from 'antd';
 import { LinkedinOutlined, GithubOutlined, MailOutlined } from '@ant-design/icons';
 
+const getScreenWidth = () => ((80 * window.innerWidth) / 100);
+
 const dashBoardEnterAnimation = keyframes`
-  from { left: -320px; }
+  from { left: -${getScreenWidth() + 2}px; }
   to { left: 0; }
 `;
 
 const dashBoardExitAnimation = keyframes`
   from { left: 0; }
-  to { left: -320px; }
+  to { left: -${getScreenWidth() + 2}px; }
 `;
 
 const getAnimation = ({ animation, animationDirection }) => {
@@ -43,7 +45,7 @@ export const DashBoardAside = styled.aside`
   @media only screen and (max-width: 512px) {
     position: fixed;
     height: 100vh;
-    left: -320px;
+    left: -${getScreenWidth() + 2}px;;
     width: 80%;
 
     animation-name: ${getAnimation};
