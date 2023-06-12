@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { isMobile } from 'react-device-detect';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 
 import {
   DasBoardContainer,
@@ -16,11 +16,17 @@ import {
   CustomMailIcon,
   MobileSideToggle,
   SideToggleBars,
+  RootContainer,
+  RootTitle,
+  RootButtonsContainer,
+  RootInfo,
 } from './dashBoardStyles';
 import ProfilePic from '../../images/ProfilePic.jpeg';
 
 function DashBoard() {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
   const [sideInfo, setSideInfo] = useState({
     animation: false,
     animationDirection: 'reverse',
@@ -34,9 +40,12 @@ function DashBoard() {
     }
   };
 
-  const onLinkButtonClicked = (link) => {
+  const onLinkButtonClicked = (link, animate = false) => {
     navigate(`/${link}`);
-    onSideToggleClicked();
+
+    if (animate) {
+      onSideToggleClicked();
+    }
   };
 
   // This image needs to change before publishing,
@@ -66,17 +75,23 @@ function DashBoard() {
         </InfoContainer>
         <ButtonsContainer>
           <CustomButton
-            onClick={() => onLinkButtonClicked('about-me')}
+            width="80%"
+            margin="10px 0"
+            onClick={() => onLinkButtonClicked('about-me', true)}
           >
             Sobre min
           </CustomButton>
           <CustomButton
-            onClick={() => onLinkButtonClicked('projects')}
+            width="80%"
+            margin="10px 0"
+            onClick={() => onLinkButtonClicked('projects', true)}
           >
             Projetos principais
           </CustomButton>
           <CustomButton
-            onClick={() => onLinkButtonClicked('tecnologies')}
+            width="80%"
+            margin="10px 0"
+            onClick={() => onLinkButtonClicked('tecnologies', true)}
           >
             Principais tecnologias
           </CustomButton>
@@ -90,7 +105,40 @@ function DashBoard() {
           </a>
         </ContactContainer>
       </DashBoardAside>
-      <Outlet />
+      {pathname === '/'
+        ? (
+          <RootContainer>
+            <RootTitle>Bem vindo(a) ao meu portifólio!</RootTitle>
+            <RootInfo>Por favor, selecione uma seção para começar</RootInfo>
+            <RootButtonsContainer>
+              <CustomButton
+                width="15%"
+                mobileWidth="50%"
+                margin="10px"
+                onClick={() => onLinkButtonClicked('about-me')}
+              >
+                Sobre min
+              </CustomButton>
+              <CustomButton
+                width="15%"
+                mobileWidth="50%"
+                margin="10px"
+                onClick={() => onLinkButtonClicked('projects')}
+              >
+                Projetos principais
+              </CustomButton>
+              <CustomButton
+                width="15%"
+                mobileWidth="50%"
+                margin="10px"
+                onClick={() => onLinkButtonClicked('tecnologies')}
+              >
+                Principais tecnologias
+              </CustomButton>
+            </RootButtonsContainer>
+          </RootContainer>
+        )
+        : <Outlet />}
     </DasBoardContainer>
   );
 }

@@ -76,8 +76,12 @@ export const CustomButton = styled(Button)`
   font-size: 14px;
   height: fit-content;
   text-align: center;
-  margin: 10px 0;
-  width: 80%;
+  margin: ${({ margin }) => margin};
+  width: ${({ width }) => width};
+
+  @media only screen and (max-width: 512px) {
+    width: ${({ mobileWidth }) => mobileWidth};
+  }
 `;
 
 export const ContactContainer = styled.div`
@@ -146,4 +150,43 @@ export const SideToggleBars = styled.div`
   border-radius: 15px;
   height: 2px;
   width: 100%;
+`;
+
+export const RootContainer = styled.div`
+  align-items: center;
+  background-color: #1D267D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  width: 80%;
+
+  @media only screen and (max-width: 512px) {
+    width: 100%;
+  }
+`;
+
+export const RootTitle = styled.h1`
+  color: #D4ADFC;
+  margin-bottom: 30px;
+
+  @media only screen and (max-width: 512px) {
+    font-size: 20px;
+  }
+`;
+
+export const RootButtonsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media only screen and (max-width: 512px) {
+    align-items: center;
+    flex-direction: column;
+  }
+`;
+
+export const RootInfo = styled.p`
+  color: #D4ADFC;
+  margin-bottom: 50px;
 `;
