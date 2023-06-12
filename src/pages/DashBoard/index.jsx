@@ -114,7 +114,7 @@ function DashBoard() {
               <CustomButton
                 width="15%"
                 mobileWidth="50%"
-                margin="10px 0"
+                margin="10px"
                 onClick={() => onLinkButtonClicked('about-me')}
               >
                 Sobre min
@@ -122,7 +122,7 @@ function DashBoard() {
               <CustomButton
                 width="15%"
                 mobileWidth="50%"
-                margin="10px 0"
+                margin="10px"
                 onClick={() => onLinkButtonClicked('projects')}
               >
                 Projetos principais
@@ -130,7 +130,7 @@ function DashBoard() {
               <CustomButton
                 width="15%"
                 mobileWidth="50%"
-                margin="10px 0"
+                margin="10px"
                 onClick={() => onLinkButtonClicked('tecnologies')}
               >
                 Principais tecnologias
