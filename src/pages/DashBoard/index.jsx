@@ -73,7 +73,6 @@ function DashBoard() {
         <ButtonsContainer>
           <CustomButton
             width="80%"
-            background="none"
             margin="10px 0"
             onClick={() => onLinkButtonClicked('about-me')}
           >
@@ -81,7 +80,6 @@ function DashBoard() {
           </CustomButton>
           <CustomButton
             width="80%"
-            background="none"
             margin="10px 0"
             onClick={() => onLinkButtonClicked('projects')}
           >
@@ -89,7 +87,6 @@ function DashBoard() {
           </CustomButton>
           <CustomButton
             width="80%"
-            background="none"
             margin="10px 0"
             onClick={() => onLinkButtonClicked('tecnologies')}
           >
@@ -112,22 +109,25 @@ function DashBoard() {
             <RootInfo>Por favor, selecione uma seção para começar</RootInfo>
             <RootButtonsContainer>
               <CustomButton
-                width="10%"
+                width="15%"
                 margin="0 10px"
+                onClick={() => onLinkButtonClicked('about-me')}
               >
-                Teste
+                Sobre min
               </CustomButton>
               <CustomButton
-                width="10%"
+                width="15%"
                 margin="0 10px"
+                onClick={() => onLinkButtonClicked('projects')}
               >
-                Teste
+                Projetos principais
               </CustomButton>
               <CustomButton
-                width="10%"
+                width="15%"
                 margin="0 10px"
+                onClick={() => onLinkButtonClicked('tecnologies')}
               >
-                Teste
+                Principais tecnologias
               </CustomButton>
             </RootButtonsContainer>
           </RootContainer>

@@ -68,7 +68,7 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const CustomButton = styled(Button)`
-  background: ${({ background }) => background};
+  background: none;
   border: none;
   border-bottom: 1px solid white;
   border-radius: 10px;
@@ -171,5 +171,5 @@ export const RootButtonsContainer = styled.div`
 
 export const RootInfo = styled.p`
   color: #D4ADFC;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 `;
