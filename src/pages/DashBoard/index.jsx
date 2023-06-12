@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { isMobile } from 'react-device-detect';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 
 import {
   DasBoardContainer,
@@ -16,11 +16,17 @@ import {
   CustomMailIcon,
   MobileSideToggle,
   SideToggleBars,
+  RootContainer,
+  RootTitle,
+  RootButtonsContainer,
+  RootInfo,
 } from './dashBoardStyles';
 import ProfilePic from '../../images/ProfilePic.jpeg';
 
 function DashBoard() {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
   const [sideInfo, setSideInfo] = useState({
     animation: false,
     animationDirection: 'reverse',
@@ -66,16 +72,25 @@ function DashBoard() {
         </InfoContainer>
         <ButtonsContainer>
           <CustomButton
+            width="80%"
+            background="none"
+            margin="10px 0"
             onClick={() => onLinkButtonClicked('about-me')}
           >
             Sobre min
           </CustomButton>
           <CustomButton
+            width="80%"
+            background="none"
+            margin="10px 0"
             onClick={() => onLinkButtonClicked('projects')}
           >
             Projetos principais
           </CustomButton>
           <CustomButton
+            width="80%"
+            background="none"
+            margin="10px 0"
             onClick={() => onLinkButtonClicked('tecnologies')}
           >
             Principais tecnologias
@@ -90,7 +105,34 @@ function DashBoard() {
           </a>
         </ContactContainer>
       </DashBoardAside>
-      <Outlet />
+      {pathname === '/'
+        ? (
+          <RootContainer>
+            <RootTitle>Bem vindo(a) ao meu portifólio!</RootTitle>
+            <RootInfo>Por favor, selecione uma seção para começar</RootInfo>
+            <RootButtonsContainer>
+              <CustomButton
+                width="10%"
+                margin="0 10px"
+              >
+                Teste
+              </CustomButton>
+              <CustomButton
+                width="10%"
+                margin="0 10px"
+              >
+                Teste
+              </CustomButton>
+              <CustomButton
+                width="10%"
+                margin="0 10px"
+              >
+                Teste
+              </CustomButton>
+            </RootButtonsContainer>
+          </RootContainer>
+        )
+        : <Outlet />}
     </DasBoardContainer>
   );
 }
