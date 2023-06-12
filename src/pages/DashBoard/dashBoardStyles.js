@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Button } from 'antd';
-import { LinkedinOutlined, GithubOutlined } from '@ant-design/icons';
+import { LinkedinOutlined, GithubOutlined, MailOutlined } from '@ant-design/icons';
 
 export const DasBoardContainer = styled.main`
   display: flex;
@@ -74,4 +74,22 @@ export const CustomGitHubIcon = styled(GithubOutlined)`
     cursor: pointer;
     transform: scale(1.2, 1.2);
   }
+`;
+
+export const InfoContainer = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 50px;
+  width: 100%;
+`;
+
+export const Info = styled.p`
+  color: #D4ADFC;
+  font-size: ${({ fontSize }) => fontSize};
+  margin: 10px 0;
+`;
+
+export const CustomMailIcon = styled(MailOutlined)`
+  margin-right: 12px;
 `;

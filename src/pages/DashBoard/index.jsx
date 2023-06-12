@@ -10,6 +10,9 @@ import {
   ContactContainer,
   CustomLinkedinIcon,
   CustomGitHubIcon,
+  InfoContainer,
+  Info,
+  CustomMailIcon,
 } from './dashBoardStyles';
 import ProfilePic from '../../images/ProfilePic.jpeg';
 
@@ -26,6 +29,13 @@ function DashBoard() {
     <DasBoardContainer>
       <DashBoardAside>
         <ProfileImage src={ProfilePic} />
+        <InfoContainer>
+          <Info fontSize="26px">Josimar Souza Brito</Info>
+          <Info fontSize="14px">
+            <CustomMailIcon />
+            contact.josimarsouza@gmail.com
+          </Info>
+        </InfoContainer>
         <ButtonsContainer>
           <CustomButton
             onClick={() => onLinkButtonClicked('about-me')}
