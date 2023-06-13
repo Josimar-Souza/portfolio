@@ -44,6 +44,15 @@ const projects = [
     github: 'https://github.com/Josimar-Souza/Calculator',
     imagePath: '../../images/projects/calculator.png',
   },
+  {
+    id: 6,
+    label: 'Music Library',
+    name: 'music-library',
+    description: 'Um simples site com o layout de uma biblioteca de músicas',
+    site: 'https://music-library-rvct.onrender.com/',
+    github: 'https://github.com/Josimar-Souza/devchallenge-music-library-page',
+    imagePath: '../../images/projects/music-library.png',
+  },
 ];
 
 export default projects;
