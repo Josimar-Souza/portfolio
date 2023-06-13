@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -10,24 +10,41 @@ import {
   CardButtonsContainer,
   CustomButon,
 } from './projectsCardStyles';
+import images from '../../images/projects/images';
 
 function ProjectsCard({ project }) {
-  const [cardImage, setCardImage] = useState('');
+  const getImage = () => {
+    const {
+      calculatorImage,
+      countriesInfosImage,
+      gamesLibraryApiImage,
+      musicLibrary,
+      sharpMoviesImage,
+      temperatureConverter,
+    } = images;
 
-  useEffect(() => {
-    const getImage = async () => {
-      const image = await import(project.imagePath);
-
-      setCardImage(image.default);
-    };
-
-    getImage();
-  }, []);
+    switch (project.name) {
+      case 'countries-info':
+        return countriesInfosImage;
+      case 'sharp-movies':
+        return sharpMoviesImage;
+      case 'games-library-api':
+        return gamesLibraryApiImage;
+      case 'temperature-converter':
+        return temperatureConverter;
+      case 'calculator':
+        return calculatorImage;
+      case 'music-library':
+        return musicLibrary;
+      default:
+        return '';
+    }
+  };
 
   return (
     <CardContainer>
       <CardImageContainer>
-        <CardImage src={cardImage} alt={`Imagem do projeto ${project.label}`} />
+        <CardImage src={getImage()} alt={`Imagem do projeto ${project.label}`} />
       </CardImageContainer>
       <CardTitle>{project.label}</CardTitle>
       <CardDescription>{project.description}</CardDescription>
