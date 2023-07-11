@@ -1,6 +1,6 @@
 import React from 'react';
 import { TecnologiesPageContainer, TecnologiesImage } from './tecnologiesStyles';
-import tecnologiesImage from '../../images/tecnologies-project.png';
+import tecnologiesImage from '../../images/tecnologies-projects.png';
 
 function Tecnologies() {
   return (
