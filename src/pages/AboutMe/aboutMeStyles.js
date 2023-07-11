@@ -3,7 +3,7 @@ import { Divider } from 'antd';
 
 export const AboutMeContainer = styled.div`
   align-items: center;
-  background-color: #1D267D;
+  background-color: #FAF0D7;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -16,7 +16,7 @@ export const AboutMeContainer = styled.div`
 `;
 
 export const AboutMeParagraph = styled.p`
-  color: #D4ADFC;
+  color: black;
   text-align: center;
   font-size: 16px;
   line-height: 25px;
@@ -29,7 +29,7 @@ export const AboutMeParagraph = styled.p`
 `;
 
 export const AboutMeTitle = styled.h1`
-  color: #D4ADFC;
+  color: black;
   text-decoration: underline;
 
   @media only screen and (max-width: 512px) {
@@ -39,7 +39,7 @@ export const AboutMeTitle = styled.h1`
 `;
 
 export const AboutMeSection = styled.h2`
-  color: #D4ADFC;
+  color: black;
 
   @media only screen and (max-width: 512px) {
     margin-bottom: 20px;

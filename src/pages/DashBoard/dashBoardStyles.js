@@ -146,7 +146,7 @@ export const MobileSideToggle = styled.div`
 `;
 
 export const SideToggleBars = styled.div`
-  background-color: white;
+  background-color: black;
   border-radius: 15px;
   height: 2px;
   width: 100%;
