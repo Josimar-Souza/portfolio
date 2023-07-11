@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ProjectsPageContainer = styled.div`
   align-items: center;
-  background-color: #1D267D;
+  background-color: #FAF0D7;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -28,7 +28,7 @@ export const ProjectsContainer = styled.div`
 `;
 
 export const ProjectsPageTitle = styled.h1`
-  color: white;
+  color: black;
 
   @media only screen and (max-width: 512px) {
     font-size: 5vw;

@@ -34,7 +34,7 @@ export const DasBoardContainer = styled.main`
 
 export const DashBoardAside = styled.aside`
   align-items: center;
-  background-color: #0C134F;
+  background-color: #FFD9C0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -70,9 +70,9 @@ export const ButtonsContainer = styled.div`
 export const CustomButton = styled(Button)`
   background: none;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
   border-radius: 10px;
-  color: #D4ADFC;
+  color: black;
   font-size: 14px;
   height: fit-content;
   text-align: center;
@@ -105,7 +105,7 @@ export const CustomLinkedinIcon = styled(LinkedinOutlined)`
 `;
 
 export const CustomGitHubIcon = styled(GithubOutlined)`
-  color: white;
+  color: black;
   font-size: 2rem;
   margin: 0 10px;
   transition: 0.5s;
@@ -125,7 +125,7 @@ export const InfoContainer = styled.div`
 `;
 
 export const Info = styled.p`
-  color: #D4ADFC;
+  color: black;
   font-size: ${({ fontSize }) => fontSize};
   margin: 10px 0;
 `;
@@ -146,7 +146,7 @@ export const MobileSideToggle = styled.div`
 `;
 
 export const SideToggleBars = styled.div`
-  background-color: white;
+  background-color: black;
   border-radius: 15px;
   height: 2px;
   width: 100%;
@@ -154,7 +154,7 @@ export const SideToggleBars = styled.div`
 
 export const RootContainer = styled.div`
   align-items: center;
-  background-color: #1D267D;
+  background-color: #FAF0D7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,7 +167,7 @@ export const RootContainer = styled.div`
 `;
 
 export const RootTitle = styled.h1`
-  color: #D4ADFC;
+  color: black;
   margin-bottom: 30px;
 
   @media only screen and (max-width: 512px) {
@@ -187,6 +187,6 @@ export const RootButtonsContainer = styled.div`
 `;
 
 export const RootInfo = styled.p`
-  color: #D4ADFC;
+  color: black;
   margin-bottom: 50px;
 `;

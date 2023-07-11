@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const TecnologiesPageContainer = styled.div`
-  background-color: #1D267D;
+  background-color: #FAF0D7;
   display: flex;
   height: 100vh;
   justify-content: center;
