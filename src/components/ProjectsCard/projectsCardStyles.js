@@ -3,8 +3,9 @@ import { Button } from 'antd';
 
 export const CardContainer = styled.div`
   align-items: center;
-  background-color: #5C469C;
+  background-color: #8CC0DE;
   border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -32,14 +33,14 @@ export const CardImage = styled.img`
 `;
 
 export const CardTitle = styled.h1`
-  color: #D4ADFC;
+  color: black;
   font-size: 20px;
   margin: 10px 0;
   text-align: center;
 `;
 
 export const CardDescription = styled.p`
-  color: #D4ADFC;
+  color: black;
   font-size: 14px;
   margin: 10px 0;
   text-align: center;
@@ -55,7 +56,7 @@ export const CardButtonsContainer = styled.div`
 `;
 
 export const CustomButon = styled(Button)`
-  background-color: #1D267D;
+  background-color: #CCEEBC;
   border: none;
-  color: #D4ADFC;
+  color: black;
 `;
