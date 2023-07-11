@@ -21,6 +21,8 @@ function ProjectsCard({ project }) {
       musicLibrary,
       sharpMoviesImage,
       temperatureConverter,
+      weatherApp,
+      gamesLibrary,
     } = images;
 
     switch (project.name) {
@@ -36,6 +38,10 @@ function ProjectsCard({ project }) {
         return calculatorImage;
       case 'music-library':
         return musicLibrary;
+      case 'weather-app':
+        return weatherApp;
+      case 'games-library':
+        return gamesLibrary;
       default:
         return '';
     }
