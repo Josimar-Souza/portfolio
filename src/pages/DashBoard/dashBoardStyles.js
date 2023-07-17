@@ -56,6 +56,8 @@ export const DashBoardAside = styled.aside`
 
 export const ProfileImage = styled.img`
   border-radius: 50%;
+  border: 4px solid black;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.45);
   width: 50%;
 `;
 
