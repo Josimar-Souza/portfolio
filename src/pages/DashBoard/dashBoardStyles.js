@@ -56,7 +56,7 @@ export const DashBoardAside = styled.aside`
 
 export const ProfileImage = styled.img`
   border-radius: 50%;
-  width: 30%;
+  width: 50%;
 `;
 
 export const ButtonsContainer = styled.div`
